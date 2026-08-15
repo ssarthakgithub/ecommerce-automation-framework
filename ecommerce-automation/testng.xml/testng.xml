@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Ecommerce Automation Suite">
+
+    <test name="Ecommerce Tests">
+
+        <classes>
+
+            <class name="LoginTest"/>
+            <class name="ProductTest"/>
+            <class name="CartTest"/>
+            <class name="CheckoutTest"/>
+            <class name="EcommerceTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>
