@@ -1,107 +1,76 @@
 # E-Commerce Automation Framework
 
-## Project Overview
+A Selenium TestNG based E-Commerce Automation Framework built using Java, Maven, and Page Object Model (POM).
 
-This project is an automated testing framework for the SauceDemo e-commerce application.
-
-The framework automates the complete shopping flow:
-
-Login → Product → Cart → Checkout → Order Confirmation
-
-## Tech Stack
+## 🛠️ Technologies Used
 
 - Java
 - Selenium WebDriver
 - TestNG
 - Maven
 - Page Object Model (POM)
-- Eclipse
+- Extent Reports
 - Git & GitHub
 
-## Framework Structure
+## 📂 Project Structure
 
-src/main/java
-├── pages
-│   ├── LoginPage.java
-│   ├── ProductsPage.java
-│   ├── CartPage.java
-│   └── CheckoutPage.java
+src
+├── main
+│   └── java
+│       ├── pages
+│       │   ├── LoginPage.java
+│       │   ├── ProductsPage.java
+│       │   ├── CartPage.java
+│       │   └── CheckoutPage.java
+│       └── utils
+│           ├── ConfigReader.java
+│           └── ScreenshotUtility.java
 │
-└── utils
-    ├── ConfigReader.java
-    └── ScreenshotUtility.java
+├── test
+│   └── java
+│       ├── LoginTest.java
+│       ├── ProductTest.java
+│       ├── CartTest.java
+│       ├── CheckoutTest.java
+│       ├── EcommerceTest.java
+│       ├── base
+│       │   ├── BaseTest.java
+│       │   └── ExtentReportManager.java
+│       └── listeners
+│           └── TestListener.java
 
-src/test/java
-├── LoginTest.java
-├── ProductTest.java
-├── CartTest.java
-├── CheckoutTest.java
-└── EcommerceTest.java
+## 🧪 Test Scenarios
 
-base
-└── BaseTest.java
-
-listeners
-└── TestListener.java
-
-testng.xml
-pom.xml
-
-## Test Scenarios
-
-### 1. Login Test
-- Open SauceDemo
-- Enter valid username
-- Enter valid password
-- Verify Products page
-
-### 2. Product Test
-- Login
-- Select product
+- Login validation
+- Product validation
 - Add product to cart
+- Cart validation
+- Checkout process
+- Complete purchase flow
 
-### 3. Cart Test
-- Open cart
-- Verify product
-- Proceed to checkout
+## 📊 Reporting
 
-### 4. Checkout Test
-- Enter customer information
-- Continue
-- Finish order
-- Verify order confirmation
+The framework generates an Extent HTML report after test execution.
 
-### 5. End-to-End Test
-Complete flow:
+The report contains:
 
-Login
-→ Product
-→ Cart
-→ Checkout
-→ Order Confirmation
+- Test execution status
+- Passed/Failed test cases
+- Execution time
+- Test details
+- Screenshots for failed tests
 
-## Test Execution
+## 📸 Screenshots
 
-Tests can be executed using TestNG.
+Screenshots are automatically captured when a test fails.
 
-The complete test suite is configured in:
+## ▶️ How to Run
 
-testng.xml
+1. Clone the repository.
+2. Import the project as a Maven project in Eclipse/IntelliJ.
+3. Update Maven dependencies.
+4. Run `testng.xml` as a TestNG Suite.
 
-## Test Result
+## 👨‍💻 Author
 
-Current TestNG suite result:
-
-- Total Tests: 5
-- Passed: 5
-- Failed: 0
-- Skipped: 0
-
-## Additional Features
-
-- Page Object Model
-- Explicit waits
-- TestNG assertions
-- TestNG listener
-- Automatic screenshot capture on test failure
-- Maven dependency management
+Sarthak Saxena
