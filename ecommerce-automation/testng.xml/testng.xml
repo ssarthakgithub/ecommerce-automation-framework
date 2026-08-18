@@ -2,6 +2,10 @@
 
 <suite name="Ecommerce Automation Suite">
 
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
     <test name="Ecommerce Tests">
 
         <classes>

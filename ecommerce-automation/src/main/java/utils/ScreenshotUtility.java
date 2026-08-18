@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtility {
 
-    public static void captureScreenshot(
+    public static String captureScreenshot(
             WebDriver driver,
             String testName) {
 
@@ -18,7 +18,7 @@ public class ScreenshotUtility {
             System.out.println(
                     "Screenshot skipped: WebDriver is null."
             );
-            return;
+            return null;
         }
 
         try {
@@ -57,6 +57,9 @@ public class ScreenshotUtility {
                     + destination.getAbsolutePath()
             );
 
+            // Return path for Extent Report
+            return destination.getAbsolutePath();
+
         } catch (Exception e) {
 
             // Don't let screenshot failure break TestNG
@@ -64,6 +67,8 @@ public class ScreenshotUtility {
                     "Screenshot skipped: "
                     + e.getMessage()
             );
+
+            return null;
         }
     }
 }
